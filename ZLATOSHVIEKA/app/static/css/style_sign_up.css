@@ -1,0 +1,36 @@
+* {
+    font-size: clamp(16px, calc(10px + 1.5vmin),40px);
+}
+
+#idForm {
+    position: relative;
+    display: flow;
+    z-index: 2;
+}
+
+#idBt_sign_up {
+    background-color: rgb(247 121 31);
+}
+
+.error {
+    color: red;
+    text-align: center;
+}
+
+#idError_login, #idError_email, #idError_pswrd {
+    display: none;
+}
+
+@media screen and (max-width: 1280px) {
+    #idForm {
+        max-width: unset;
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #idForm {
+        max-width: unset;
+        width: 90%;
+    }
+}

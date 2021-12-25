@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
+    <title>Доставка</title>
+    <link rel='shortcut icon' href="{{ url_for('static', filename='image/logo.png')}}" type='image/png' sizes="200 x 304">
+    <link rel='stylesheet' href="{{ url_for('static', filename='css/styles.css')}}">
+    <link rel='stylesheet' href="{{ url_for('static', filename='css/style_delivery.css')}}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body onscroll="funcOnScroll()">
+    <div class="background"></div>
+    <nav id="idNav_bar" class="nav_bar">
+        <div id="idParent_nav_panel">
+            <div class="nav_panel" id="idNav_panel">
+                <div id="idLogo"><a href="index.html"><img id="idImgLogo" src="{{ url_for('static', filename='image/logo.png')}}" width="80" height="121.6"></a></div>
+                <h1 id="idBrand_name"><a href="index.html">Златошвейка</a></h1>
+                <ul class="ul_sections" id="idUl_sections">
+					<li id="idBt_embr_works" class="section_bt" title="Вышитые работы"><a href="embr_works.html">Вышитые работы</a></li>
+					<li id="idBt_desgn_devlpnt" class="section_bt" title="Разработка дизайна"><a href="dev_design.html">Разработка дизайна</a></li>
+					<li id="idBt_pay" class="section_bt" title="Оплата"><a href="payment.html">Оплата</a></li>
+					<li id="idBt_delivery" class="section_bt" title="Доставка"><a href="delivery.html">Доставка</a></li>
+					<li id="idBt_contacts" class="section_bt" title="Контакты"><a href="contacts.html">Контакты</a></li>
+				</ul>
+            </div>
+            <button class="btOnNav" id="idInput" onclick="onClick_input()">{{bt_input}}</button>
+			<div class="username_contain">
+				<button class="btOnNav" id="idCart" onclick="window.open('cart.html', '_self')">🛒</button>
+				<p class="username">{{username}}</p>
+			</div>
+        </div>
+    </nav>
+    <div class="content_area">
+        <button id="idSideBar_bt" onclick="onClick_btSideBar()">
+            <div id="idSideBar_ch">&#10095;</div>
+        </button>
+        <div class="content">
+            <header>
+                <h1>ДОСТАВКА</h1>
+            </header>
+            <article>
+                <br><h4>КАК ПОЛУЧИТЬ ОПЛАЧЕННЫЙ ДИЗАЙН</h4>
+                    <p>Итак, вы сделали заказ на нашем сайте и оплатили его.</p>
+                    <p>Купленные вами дизайны, мы вышлем вам по электронной почте в течение 1 суток от момента поступления денег в счет их оплаты.</p>
+                    <p>Если у вас вдруг возникнут какие-то проблемы с доставкой или распаковкой архива с дизайнами, напишите нам об этом. 
+                       Не забудьте указать при этом номер вашего заказа. Мы свяжемся с вами и поможем разрешить возникшую проблему.</p>
+                    <p>Каждый полученный вами файл представляет собой zip или rar-архив, распаковать который вы сможете как встроенными 
+                       средствами Windows, так и различными архиваторами типа WinRaR, WinZip и проч. В этом архиве вы найдете папку 
+                       (или несколько папок при покупке коллекции либо дизайна в разных размерах), содержащую, во-первых, jpeg-изображение 
+                       с картой цветов и необходимыми сведениями о дизайне (количество стежков, линейные размеры, количество остановок и смен цвета), 
+                       во-вторых, сами стежковые файлы в нескольких машинных форматах (DST, PES, JEF, VIP, HUS, VP3). Дизайны во внутреннем формате 
+                       вышивальных программ (emb, pxf и т.д.) <b>не предоставляются</b>.</p>
+                    <p>Удачной вам вышивки!</p>
+            </article>
+            <footer>
+                <div id="idSocNetworks">
+                    <p>
+                        Мы в социальных сетях:
+                        <a id="idLinkVk" href="https://vk.com/club166351674"><img width="30" height="30" title="Вконтакте" viewBox="0 0 30 30" fill="none" src="{{ url_for('static', filename='image/link_vk_img.png')}}"></a>
+                    </p>
+                </div>
+                <p id="idCopyright">
+                    © Златошвейка. По вопросам сотрудничества обращаться - <a href="mailto:Marya-174@yandex.ru">Marya-174@yandex.ru</a>
+                    <br>  Техническая поддержка - <a href="mailto:callla7422@gmail.com">callla7422@gmail.com</a>
+                </p>
+            </footer>
+        </div>
+        <button id="idBt_to_top">
+            <div id="idChar_to_top">&#10095;</div>
+        </button>
+    </div>
+    <script src="{{ url_for('static', filename='JS/index.js')}}"></script>
+</body>
+</html>

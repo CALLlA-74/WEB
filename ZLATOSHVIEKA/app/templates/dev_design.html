@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
+    <title>Заказать дизайн</title>
+    <link rel='shortcut icon' href="{{ url_for('static', filename='image/logo.png')}}" type='image/png' sizes="200 x 304">
+    <link rel='stylesheet' href="{{ url_for('static', filename='css/styles.css')}}">
+    <link rel='stylesheet' href="{{ url_for('static', filename='css/style_dev_design.css')}}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body onscroll="funcOnScroll()">
+    <div class="background"></div>
+    <nav id="idNav_bar" class="nav_bar">
+        <div id="idParent_nav_panel">
+            <div class="nav_panel" id="idNav_panel">
+                <div id="idLogo"><a href="index.html"><img id="idImgLogo" src="{{ url_for('static', filename='image/logo.png')}}" width="80" height="121.6"></a></div>
+                <h1 id="idBrand_name"><a href="index.html">Златошвейка</a></h1>
+                <ul class="ul_sections" id="idUl_sections">
+					<li id="idBt_embr_works" class="section_bt" title="Вышитые работы"><a href="embr_works.html">Вышитые работы</a></li>
+					<li id="idBt_desgn_devlpnt" class="section_bt" title="Разработка дизайна"><a href="dev_design.html">Разработка дизайна</a></li>
+					<li id="idBt_pay" class="section_bt" title="Оплата"><a href="payment.html">Оплата</a></li>
+					<li id="idBt_delivery" class="section_bt" title="Доставка"><a href="delivery.html">Доставка</a></li>
+					<li id="idBt_contacts" class="section_bt" title="Контакты"><a href="contacts.html">Контакты</a></li>
+				</ul>
+            </div>
+            <button class="btOnNav" id="idInput" onclick="onClick_input()">{{bt_input}}</button>
+			<div class="username_contain">
+				<button class="btOnNav" id="idCart" onclick="window.open('cart.html', '_self')">🛒</button>
+				<p class="username">{{username}}</p>
+			</div>
+        </div>
+    </nav>
+    <div class="content_area">
+        <button id="idSideBar_bt" onclick="onClick_btSideBar()">
+            <div id="idSideBar_ch">&#10095;</div>
+        </button>
+        <div class="content">
+            <header>
+                <h1>РАЗРАБОТКА ДИЗАЙНА МАШИННОЙ ВЫШИВКИ</h1>
+            </header>
+            <div id="idMain_area">
+                <button onclick="showDescription();" id="idBt_help">Помощь</button><br>
+                <article id="idDescription">
+                    <p>
+                        Если вам нравится качество наших работ, но необходимо что-то особенное, то вы можете оформить заказ
+                        на индивидуальную разработку программы вышивки по вашей картинке. Для этого вам следует заполнить форму
+                        внизу этой страницы (поля, отмеченные красной звездочкой, обязательны к заполнению).
+                    </p>
+                    <p>Если форма заказа вам не видна - зарегистрируйтесь или войдите в систему как пользователь.</p>
+                    <p>
+                        Картинку, по которой будет разрабатываться дизайн, желательно предоставить хорошего качества (не менее 300 dpi)
+                        в растровом (JPG, TIF, PSD) формате. Желательно, чтобы картинка не подвергалась предварительной
+                        обработке в программе фотошоп или ей подобных.
+                    </p>
+                    <p>
+                        Стоимость и сроки выполнения вашего заказа будут зависеть от степени сложности дизайна. Для заказа рядовой
+                        сложности (шеврон, логотип) срок изготовления составляет 3-4 дня с момента оплаты. Для заказов в стиле художественной
+                        глади или повышенной сложности сроки могут возрасти и их необходимо оговаривать особо. Минимальная цена разработки
+                        программы вышивки - 300 руб. В отдельных случаях, для очень простых дизайнов, мы устанавливаем и более низкую цену,
+                        но, в любом случае, назвать точную цену мы сможем только лишь, когда увидим картинку.
+                    </p>
+                    <p>Если готовый дизайн необходим вам через 1 сутки (24 часа), его стоимость возрастет на 50%.</p>
+                    <p>В случае заказа особо сложного дизайна, например, иконы в технике глади, стоимость и сроки его изготовления обсуждаются особо.</p>
+                    <p>Цены на портреты в технике фотостежка или сфумато - от 2000 руб. Сроки изготовления портретов - 10 - 15 дней.</p>
+                    <p>
+                        Таким образом, точно рассчитать ваш заказ мы сможем после получения заполненной формы. Вся информация будет прислана
+                        вам по электронной почте в течение суток после заполнения и отправки данной формы. Срок изготовления дизайна начнет
+                        отсчитываться с момента получения оплаты за него.
+                    </p>
+                </article>
+                <div id="idForm">
+                    <p>Фотография-образец для дизайна:<input type="file" accept="image/jpeg, image/gif, image/png, image/tif, image/psd"></p>
+                    <div class="point_tech_work">
+                        <p>
+                            Техника вышивки:
+                            <ul class="top_menu">
+                                <li onmouseleave="outOfList('idList_tech');">
+                                    <input type="text" disabled="disabled" id="idInpTech">
+                                    <button onclick="showListTech();" id="idBt_tech"><div id="idCh_tech">&#10095;</div></button>
+                                    <ul class="sub_menu" id="idList_tech">
+                                        <li onclick="checkList('Художественная гладь', 'idInpTech', 'idList_tech');">Художественная гладь</li>
+                                        <li onclick="checkList('Фотостежок', 'idInpTech', 'idList_tech');">Фотостежок</li>
+                                        <li onclick="checkList('Сфумато', 'idInpTech', 'idList_tech');">Сфумато</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </p>
+                    </div>
+                    <label>
+                        Размер вышивки (ширина x высота) (мм х мм):
+                        <input type="number" class="inpSize"> <input type="number" class="inpSize">
+                    </label>
+                    <div class="point_tech_work">
+                        <label>Количество цветов:</label>
+                        <ul class="top_menu">
+                            <li onmouseleave="outOfList('idList_clrs');">
+                                <input type="text" disabled="disabled" id="idInpClrs"><button onclick="showListColors();" id="idBt_clrs">
+                                    <div id="idCh_tech">&#10095;</div>
+                                </button>
+                                <ul class="sub_menu" id="idList_clrs">
+                                    <li onclick="checkList('Как на картинке', 'idInpClrs', 'idList_clrs');">Как на картинке</li>
+                                    <li onclick="checkList('1', 'idInpClrs', 'idList_clrs');">1</li>
+                                    <li onclick="checkList('2', 'idInpClrs', 'idList_clrs');">2</li>
+                                    <li onclick="checkList('3', 'idInpClrs', 'idList_clrs');">3</li>
+                                    <li onclick="checkList('4', 'idInpClrs', 'idList_clrs');">4</li>
+                                    <li onclick="checkList('5', 'idInpClrs', 'idList_clrs');">5</li>
+                                    <li onclick="checkList('6', 'idInpClrs', 'idList_clrs');">6</li>
+                                    <li onclick="checkList('7', 'idInpClrs', 'idList_clrs');">7</li>
+                                    <li onclick="checkList('8', 'idInpClrs', 'idList_clrs');">8</li>
+                                    <li onclick="checkList('9', 'idInpClrs', 'idList_clrs');">9</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <label>Формат готового дизайна:</label>
+                        <ul class="top_menu">
+                            <li onmouseleave="outOfList('idList_format');">
+                                <input type="text" disabled="disabled" id="idInpFormat"><button onclick="showListFormat();" id="idBt_format">
+                                    <div id="idCh_tech">&#10095;</div>
+                                </button>
+                                <ul class="sub_menu" id="idList_format">
+                                    <li onclick="checkList('ART', 'idInpFormat', 'idList_format');">ART</li>
+                                    <li onclick="checkList('DST', 'idInpFormat', 'idList_format');">DST</li>
+                                    <li onclick="checkList('JEF', 'idInpFormat', 'idList_format');">JEF</li>
+                                    <li onclick="checkList('PES', 'idInpFormat', 'idList_format');">PES</li>
+                                    <li onclick="checkList('VIP', 'idInpFormat', 'idList_format');">VIP</li>
+                                    <li onclick="checkList('VP3', 'idInpFormat', 'idList_format');">VP3</li>
+                                    <li onclick="checkList('HUS', 'idInpFormat', 'idList_format');">HUS</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <label>Материал:</label>
+                        <ul class="top_menu">
+                            <li onmouseleave="outOfList('idList_material');">
+                                <input type="text" disabled="disabled" id="idInpMaterial"><button onclick="showListMaterial();" id="idBt_material">
+                                    <div id="idCh_tech">&#10095;</div>
+                                </button>
+                                <ul class="sub_menu" id="idList_material">
+                                    <li onclick="checkList('Плотная нерастяжимая ткань', 'idInpMaterial', 'idList_material');">Плотная нерастяжимая ткань</li>
+                                    <li onclick="checkList('Трикотаж, футболки', 'idInpMaterial', 'idList_material');">Трикотаж, футболки</li>
+                                    <li onclick="checkList('Ворсовая ткань, флис, драп', 'idInpMaterial', 'idList_material');">Ворсовая ткань, флис, драп</li>
+                                    <li onclick="checkList('Неизвестный материал', 'idInpMaterial', 'idList_material');">Неизвестный материал</li>
+                                    <li onclick="checkList('См. комментарий', 'idInpMaterial', 'idList_material');">См. комментарий</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <label>Комментарий:</label>
+                        <textarea id="idComment"></textarea>
+                    </div>
+                    <button id="idBt_order">ЗАКАЗАТЬ</button>
+                </div>
+            </div>
+            <footer>
+                <div id="idSocNetworks">
+                    <p>
+                        Мы в социальных сетях:
+                        <a id="idLinkVk" href="https://vk.com/club166351674"><img width="30" height="30" title="Вконтакте" viewBox="0 0 30 30" fill="none" src="{{ url_for('static', filename='image/link_vk_img.png')}}"></a>
+                    </p>
+                </div>
+                <p id="idCopyright">
+                    © Златошвейка. По вопросам сотрудничества обращаться - <a href="mailto:Marya-174@yandex.ru">Marya-174@yandex.ru</a>
+                    <br>  Техническая поддержка - <a href="mailto:CALLlA-74@yandex.ru">CALLlA-74@yandex.ru</a>
+                </p>
+            </footer>
+        </div>
+        <button id="idBt_to_top">
+            <div id="idChar_to_top">&#10095;</div>
+        </button>
+    </div>
+    <script src="{{ url_for('static', filename='JS/index.js')}}"></script>
+    <script src="{{ url_for('static', filename='JS/dev_design.js')}}"></script>
+</body>
+</html>

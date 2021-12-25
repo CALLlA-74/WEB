@@ -1,0 +1,59 @@
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+}
+
+#idParent {
+    position: absolute;
+    left: 50px;
+    right: 50px;
+    display: block;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.Base {
+    width: 100%;
+    margin-top: 20px;
+    position: relative;
+    display: grid;
+    height: max-content;
+    grid-template-areas: "name price remove";
+    grid-template-columns: max-content max-content max-content;
+    border: 1px solid rgb(247 121 31);
+    border-radius: 20px;
+    overflow-x: hidden;
+}
+
+.name{
+    margin-left: 20px;
+}
+
+.price {
+    position: absolute;
+    right: 125px;
+}
+
+.remove {
+    position: absolute;
+    right: 30px;
+    bottom: 3px;
+}
+
+.bt_remove {
+    border-radius: 15px;
+    background-color: rgb(247 121 31);
+    color: whitesmoke;
+    font-family: 'Lobster 1.4';
+    padding: 0.5rem;
+}
+
+.summ {
+    border-top: black solid 1px;
+    margin-top: 20px;
+}

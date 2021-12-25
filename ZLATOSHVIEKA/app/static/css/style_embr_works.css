@@ -1,0 +1,57 @@
+#idUl_sections #idBt_embr_works {
+    background: linear-gradient(to bottom, rgb(247 121 31), rgb(250 196 157));
+}
+
+#idUl_sections #idBt_embr_works:hover {
+    background: linear-gradient(to top, rgb(247 121 31), rgb(250 196 157));
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#idParentFlex {
+    min-height: inherit;
+}
+
+#idFlex_works {
+    margin: 50px 50px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex_element {
+    width: 300px;
+    height: 300px;
+    background-color: rgba(245, 245, 245, 0);
+    margin-right: 20px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.flex_element div {
+    font-size: clamp(16px, calc(10px + 1.5vmin), 40px);
+}
+
+.flex_element:hover {
+    color: whitesmoke;
+    background-color: rgba(247, 121, 31, 0.5);
+}
+
+.work_label{
+    margin:0;
+    width: 100%;
+    display: block;
+    text-align: center;
+    position: relative;
+}
+
+#idFlex_works img {
+    height: 200px;
+    display: block;
+    margin: 20px auto;
+}

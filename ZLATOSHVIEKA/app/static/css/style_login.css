@@ -1,0 +1,50 @@
+* {
+    font-size: clamp(16px, calc(10px + 1.5vmin),40px);
+}
+
+input{
+    width: 100%;
+}
+
+#idForm{
+    position: relative;
+    display: flow;
+    z-index: 2;
+}
+
+#idDiv_sign_in_up {
+    text-align: center;
+}
+
+#idA_sign_up {
+    text-align: center;
+}
+
+#idBt_login {
+    background-color: rgb(247 121 31);
+}
+
+#idError {
+    color: red;
+}
+
+@media screen and (max-width: 1280px) {
+    #idDiv_sign_in_up {
+        display: grid;
+        grid-template-areas: "idBt_sign_up"
+            "idBt_login";
+        grid-auto-rows: 100%;
+        grid-auto-columns: 1fr;
+        grid-row-gap: 10px;
+    }
+
+    #idForm {
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 500px){
+    #idForm {
+        width: 80%;
+    }
+}

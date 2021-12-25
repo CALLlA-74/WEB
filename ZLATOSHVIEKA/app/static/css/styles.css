@@ -1,0 +1,323 @@
+@font-face {
+	font-family: 'Lobster';
+	src: url(../fonts/Lobster/Lobster.ttf);
+}
+
+@font-face {
+	font-family: 'SegoeUIemj';
+	src: url(../fonts/SegoeUIemj/seguiemj.ttf);
+}
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	overflow-y: scroll;
+	transition: 0s;
+	font-family: "Roboto", "Segoe UI", Calibri, Candara, Arial, sans-serif;
+}
+
+html, body {
+	height: 100%;
+}
+
+.background {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-image: url(../image/background_image.png);
+	background-size: cover;
+	opacity: 0.25;
+	z-index: 1;
+}
+
+.nav_bar {
+	z-index: 100;
+	top: 0;
+	height: 180px;
+	left: 0;
+	right: 0;
+	position: fixed;
+	background-color: rgb(247 121 31);
+	box-sizing: content-box;
+}
+
+#idParent_nav_panel{
+	position: relative;
+	height: 100%;
+	margin-left: 50px;
+	margin-right: 50px;
+}
+
+.nav_panel {
+	position: absolute;
+	left: 50%;
+	min-width: 1000px;
+	display: flex;
+	margin: auto 0 auto -500px;
+}
+
+#idNav_bar #idLogo {
+	margin-top: 25.2px;
+}
+
+#idBrand_name {
+	font-family: Lobster;
+	color: whitesmoke;
+	font-weight: 700;
+	font-size: 5vw;  /*5vw 62px*/
+	font-style: oblique;
+	height: 67px;
+	position: absolute;
+	bottom: 0px;
+	margin-left: 110px;
+	letter-spacing: 2px;
+}
+
+.btOnNav {
+	color: rgb(247 121 31);
+	font-family: Lobster;
+	font-size: clamp(16px, calc(9px + 1.5vmin),40px);
+	background-color: whitesmoke;
+	padding: 0.5rem;
+	border-radius: 25px;
+	z-index: 1000;
+	position: relative;
+}
+
+.btOnNav:hover {
+	background: linear-gradient(to top, rgb(254 125 30), rgb(255 253 251));
+	cursor: pointer;
+}
+
+#idInput {
+	float: right;
+	margin-right: calc(-50px + 0.5rem);
+	margin-left: auto;
+	margin-top: 0.5rem;
+	width: calc(71px + 1rem);
+}
+
+.username_contain {
+	display: block;
+	position: relative;
+	float: right;
+	margin-right: calc(-10px + 0.5rem);
+	margin-left: auto;
+	width: max-content;
+}
+
+#idCart {
+	display: block;
+	float: right;
+	margin-right: calc(-93.5px + 0.5rem);
+	margin-left: auto;
+	margin-top: calc(3.5rem + 2px);
+	width: calc(71px + 1rem);
+}
+
+.username {
+	display: block;
+	float: left;
+	margin-top: 70px;
+	margin-right: 15px;
+	font-size: clamp(16px, calc(9px + 1.5vmin),40px);
+	color: whitesmoke;
+	font-style: italic;
+}
+
+.ul_sections {
+	border-right: rgb(250 196 157) dotted 1px;
+	height: 32px;
+	position: absolute;
+	left: 15%;
+	background-color: rgb(247 121 31);
+}
+
+.section_bt {
+	float: left;
+	list-style-type: none;
+	font-family: Lobster;
+	color: whitesmoke;
+	font-weight: 700;
+	font-size: clamp(16px, calc(10px + 1.5vmin),24px);
+	padding: 10px;
+	border-left: rgb(250 196 157) dotted 1px;
+}
+
+.section_bt a{
+	text-decoration: none;
+	color: whitesmoke;
+}
+
+.section_bt:hover {
+	background: linear-gradient(to top, rgb(247 121 31), rgb(250 196 157));
+}
+
+.content_area {
+	position: absolute;
+	display:flex;
+	z-index: 2;
+	opacity: 1;
+	min-height: 100%;
+	width: 100%;
+	top: 210px;
+	margin-bottom: 0;
+	bottom: 0;
+}
+
+#idSideBar_bt {
+	visibility: collapse;
+	background-color: rgb(247 121 31);
+	position: fixed;
+	left: 0;
+	width: 30px;
+	height: 40px;
+	border-radius: 0 20px 20px 0;
+	opacity: 0.4;
+}
+
+#idSideBar_ch{
+	color: whitesmoke;
+	font-size: 30px;
+}
+
+.content {
+	min-height: inherit;
+	margin-bottom: 0;
+	line-height: 2.5rem;
+}
+
+.content p{
+	text-indent: 3.5rem;
+}
+
+.content_area #idBt_to_top {
+	position: fixed;
+	right: 5px;
+	bottom: 30px;
+	opacity: 0.4;
+	height: 40px;
+	width: 40px;
+	background-size: cover;
+	background-color: rgb(247 121 31);
+	vertical-align: middle;
+	border-radius: 20px;
+	transition: 0s;
+	border-color: white;
+	border-width: medium;
+}
+
+.content_area #idBt_to_top #idChar_to_top {
+	display: inline-block;
+	font-family: SegoeUIemj;
+	font-size: 30px;
+	color: whitesmoke;
+	transform: rotate(-90deg);
+}
+
+.content header {
+	margin-left: 50px;
+	margin-right: 50px;
+}
+
+.content article {
+	margin-left: 50px;
+	margin-right: 50px;
+	min-height: inherit;
+	font-family: "Roboto Slab", Cambria, Constantia, "Times New Roman", serif;
+	margin-bottom: 30px;
+	font-size: clamp(16px, calc(15px + 1.5vmin),40px); /*2.5vw*/
+	width: auto;
+}
+
+footer {
+	position: absolute;
+	background-color: rgb(247 121 31);
+	color: whitesmoke;
+	width: 100%;
+	left: 0;
+	right: 0;
+	min-height: 50px;
+}
+
+#idSocNetworks {
+	border-top: 1px solid whitesmoke;
+	padding: 0.5rem 1rem;
+	margin-top: 0.6rem;/*10px;*/
+	height: min-content;
+	font-size: clamp(16px, calc(5px + 1.5vmin),40px);
+}
+
+#idCopyright {
+	border-top: 1px solid whitesmoke;
+	padding: 1rem;
+	font-size: clamp(16px, calc(5px + 1.5vmin),40px);
+}
+
+#idLinkVk {
+	margin-left: 15px;
+	vertical-align: middle;
+	width: 30px;
+	height: 30px;
+	display: inline-block;
+	font-size: 1.5vw;
+}
+
+.content a {
+	text-decoration: none;
+}
+
+footer a {
+	color: whitesmoke;
+}
+
+.content a:hover{
+	text-decoration: underline;
+}
+
+@media screen and (max-width: 1030px){
+	.ul_sections {
+		visibility: collapse;
+		height: min-content;
+		position: fixed;
+		left: -500px;
+		top: 180px;
+		transition: 0.3s;
+	}
+
+	.content_area #idBt_to_top{
+		opacity: 1;
+	}
+
+	.nav_panel {
+		left: auto;
+		margin: 0;
+	}
+
+	#idSideBar_bt{
+		visibility: visible;
+	}
+	
+	.section_bt{
+		float: none;
+	}
+
+	.section_bt > a {
+		display: block;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.section_bt {
+		font-weight: 100;
+	}
+
+	.content_area #idBt_to_top {
+		opacity: 1;
+	}
+}

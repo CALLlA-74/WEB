@@ -1,0 +1,16 @@
+#idUl_sections #idBt_delivery {
+    background: linear-gradient(to bottom, rgb(247 121 31), rgb(250 196 157));
+}
+
+#idUl_sections #idBt_delivery:hover {
+    background: linear-gradient(to top, rgb(247 121 31), rgb(250 196 157));
+}
+
+nav a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.content article p{
+    text-indent: 25px;
+}

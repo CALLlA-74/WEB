@@ -1,0 +1,123 @@
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#idBase{
+    margin-left: 50px;
+    margin-right: 50px;
+    min-height: 100vh;
+}
+
+#idDivImgs {
+    margin-top: 10px;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-bottom: 20px;
+    position: relative;
+    display: flex;
+    width: auto;
+    height: 490px;
+    justify-content: center;
+    background-color: rgba(245, 245, 245, 0.7);
+}
+
+.Img_violin {
+    position:absolute;
+    z-index:1;
+    display: block;
+    height: 490px;
+    width: auto;
+}
+
+.btImgs {
+    position: absolute;
+    display: table-cell;
+    z-index: 1;
+    width: 20px;
+    margin-top:0;
+    margin-bottom: 0;
+    border-radius: 10px;
+    color: whitesmoke;
+    border: none;
+    padding: unset;
+    opacity: 0.25;
+}
+
+.btImgs:hover{
+    opacity: 1;
+}
+
+#idBtchr_lft, #idBtchr_rght{
+    height: max-content;
+    font-size: clamp(16px, calc(10px + 1.5vmin),40px);
+    background-color: black;
+}
+
+#idBtImgs_rght {
+    top: 50%;
+    right: 0;
+}
+
+#idBtImgs_lft {
+    top: 50%;
+    left: 0;
+}
+
+#idBtImgs_lft #idBtchr_lft{
+    transform: rotate(180deg);
+}
+
+#idArt_decript{
+    display: inline-block;
+    min-height: unset;
+    margin:0;
+    text-indent: 25px;
+}
+
+#idDiv_buy{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+#idBt_put_to_cart {
+    background-color: rgb(247 121 31);
+    float: unset;
+    border-radius: 20px
+}
+
+#idP_price {
+    float: right;
+    font-size: clamp(16px, calc(35px + 1.5vmin),40px);
+}
+
+@media screen and (max-width:840px){
+    .btImgs{
+        opacity: 1;
+    }
+
+    #idDivImgs {
+        display: block;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+    .Img_violin{
+        text-align:center;
+        margin:0 auto;
+    }
+}
+
+@media screen and (max-width:650px) {
+    #idDivImgs {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+}
+
+@media screen and (max-width:460px) {
+    #idDivImgs {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}

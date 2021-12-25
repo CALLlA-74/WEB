@@ -1,0 +1,12 @@
+#idUl_sections #idBt_pay {
+    background: linear-gradient(to bottom, rgb(247 121 31), rgb(250 196 157));
+}
+
+    #idUl_sections #idBt_pay:hover {
+        background: linear-gradient(to top, rgb(247 121 31), rgb(250 196 157));
+    }
+
+nav a {
+    text-decoration: none;
+    color: inherit;
+}

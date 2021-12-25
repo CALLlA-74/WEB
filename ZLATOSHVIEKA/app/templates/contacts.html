@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>Связаться с нами</title>
+    <link rel='shortcut icon' href="{{ url_for('static', filename='image/logo.png')}}" type='image/png' sizes="200 x 304">
+    <link rel='stylesheet' href="{{ url_for('static', filename='css/styles.css')}}">
+    <link rel='stylesheet' href="{{ url_for('static', filename='css/style_contacts.css')}}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body onscroll="funcOnScroll()">
+    <div class="background"></div>
+    <nav id="idNav_bar" class="nav_bar">
+        <div id="idParent_nav_panel">
+            <div class="nav_panel" id="idNav_panel">
+                <div id="idLogo"><a href="index.html"><img id="idImgLogo" src="{{ url_for('static', filename='image/logo.png')}}" width="80" height="121.6"></a></div>
+                <h1 id="idBrand_name"><a href="index.html">Златошвейка</a></h1>
+                <ul class="ul_sections" id="idUl_sections">
+					<li id="idBt_embr_works" class="section_bt" title="Вышитые работы"><a href="embr_works.html">Вышитые работы</a></li>
+					<li id="idBt_desgn_devlpnt" class="section_bt" title="Разработка дизайна"><a href="dev_design.html">Разработка дизайна</a></li>
+					<li id="idBt_pay" class="section_bt" title="Оплата"><a href="payment.html">Оплата</a></li>
+					<li id="idBt_delivery" class="section_bt" title="Доставка"><a href="delivery.html">Доставка</a></li>
+					<li id="idBt_contacts" class="section_bt" title="Контакты"><a href="contacts.html">Контакты</a></li>
+				</ul>
+            </div>
+            <button class="btOnNav" id="idInput" onclick="onClick_input()">{{bt_input}}</button>
+			<div class="username_contain">
+				<button class="btOnNav" id="idCart" onclick="window.open('cart.html', '_self')">🛒</button>
+				<p class="username">{{username}}</p>
+			</div>
+        </div>
+    </nav>
+    <div class="content_area">
+        <button id="idSideBar_bt" onclick="onClick_btSideBar()">
+            <div id="idSideBar_ch">&#10095;</div>
+        </button>
+        <div class="content">
+            <header>
+                <h1>Челябинск - «ТРК Куба»</h1>
+            </header>
+            <article><br>
+                <div class="map">
+                    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A39b1eb7ef8782b1869c43ca6b05fd042a4d7f069b1ed6a019ebd4a83dc89b4d0&amp;width=100%25&amp;height=441&amp;lang=ru_RU&amp;scroll=true"></script>
+                </div><br>
+                Е-mail: <a href="mailto:Marya-174@yandex.ru">Marya-174@yandex.ru</a><br>
+                Телефон: <a href="tel:+79127767187">+7 (912) 77-67-187</a>  (с 8 до 18 часов по московскому времени (кроме воскресенья)) (Россия)
+            </article>
+            <footer>
+                <div id="idSocNetworks">
+                    <p>
+                        Мы в социальных сетях:
+                        <a id="idLinkVk" href="https://vk.com/club166351674"><img width="30" height="30" title="Вконтакте" viewBox="0 0 30 30" fill="none" src="{{ url_for('static', filename='image/link_vk_img.png')}}"></a>
+                    </p>
+                </div>
+                <p id="idCopyright">
+                    © Златошвейка. По вопросам сотрудничества обращаться - <a href="mailto:Marya-174@yandex.ru">Marya-174@yandex.ru</a>
+                    <br>  Техническая поддержка - <a href="mailto:CALLlA-74@yandex.ru">CALLlA-74@yandex.ru</a>
+                </p>
+            </footer>
+        </div>
+        <button id="idBt_to_top">
+            <div id="idChar_to_top">&#10095;</div>
+        </button>
+    </div>
+    <script src="{{ url_for('static', filename='JS/index.js')}}"></script>
+</body>
+</html>

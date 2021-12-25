@@ -1,0 +1,32 @@
+#idUl_sections #idBt_contacts {
+    background: linear-gradient(to bottom, rgb(247 121 31), rgb(250 196 157));
+}
+#idUl_sections #idBt_contacts:hover {
+    background: linear-gradient(to top, rgb(247 121 31), rgb(250 196 157));
+}
+
+nav a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.map {
+    margin: auto 0;
+    overflow: hidden;
+    width: 100%;
+}
+
+.content article {
+    overflow: hidden;
+}
+
+.content {
+    overflow: hidden;
+    height: min-content;
+}
+
+@media screen and (min-height: 800px){
+    .content {
+        height: auto;
+    }
+}

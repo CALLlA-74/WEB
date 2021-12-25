@@ -1,0 +1,133 @@
+article p{
+    text-indent: 25px;
+}
+
+.content, .content input {
+    font-size: clamp(16px, calc(10px + 1.5vmin),40px);
+    color: black;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#idMain_area {
+    display: block;
+    margin-right: 50px;
+    margin-left: 50px;
+}
+
+#idBt_help {
+    position: absolute;
+    margin-top: 15px;
+    right: 50px;
+    border: none;
+    background: none;
+    font-size: clamp(9px, calc(7px + 1.5vmin),30px);
+    width: max-content;
+}
+
+#idBt_help:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+#idDescription {
+    display: none;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+}
+
+#idForm {
+    overflow-x: hidden;
+    
+    margin: 0 50px auto 50px;
+}
+
+@media screen and (min-height: 900px){
+    #idForm {
+        min-height: 185vw;
+    }
+}
+
+#idForm p input{
+    margin-left: 10px;
+}
+
+.inpSize{
+    width: 100px;
+}
+
+.point_tech_work p {
+    float: left;
+    margin-right: 10px;
+    width: max-content;
+}
+
+.top_menu > li {
+    list-style-type: none;
+    display: inline-block;
+    margin-right: 20px;
+    position: relative;
+}
+
+#idInpTech {
+    float: left;
+    margin-top: 8px;
+}
+
+.top_menu button {
+    margin-left: 0;
+    height: clamp(16px, calc(15px + 1.5vmin),40px);
+    width: clamp(16px, calc(15px + 1.5vmin),40px);
+    text-align: center;
+}
+
+#idCh_tech {
+    transform: rotate(90deg);
+}
+
+.sub_menu {
+    margin-top: -5px;
+    position: absolute;
+    display: none;
+    z-index: 1000;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    list-style-type: none;
+    background-color: whitesmoke;
+    border: 1px solid black;
+}
+
+.sub_menu > li:hover {
+    cursor: pointer;
+    background: rgb(247 121 31);
+    color: whitesmoke;
+}
+
+#idInpMaterial{
+    min-width: 270px;
+}
+
+#idComment{
+    min-width: 100%;
+    min-height: 232px;
+    resize: none;
+}
+
+#idForm button {
+    color: whitesmoke;
+    background-color: rgb(247 121 31);
+}
+
+#idBt_order {
+    padding: 0.5rem;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+#idForm button:hover {
+    background: linear-gradient(to top, rgb(247 121 31), rgb(250 196 157));
+}

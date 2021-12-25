@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset='utf-8'>
+    <title>Регистрация</title>
+    <link rel='shortcut icon' href="{{ url_for('static', filename='image/logo.png')}}" type='image/png' sizes="200 x 304">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style_sign_up.css')}}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-kQtW33rZJAHjgefvhyyzcGF3C5TFyBQBA13V1RKPf4uH+bwyzQxZ6CmMZHmNBEfJ" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://getbootstrap.com/docs/5.1/examples/sign-in/signin.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="{{ url_for('static', filename='JS/sign_up.js')}}" ></script>
+    <script src="{{ url_for('static', filename='JS/'+scrpt)}}"></script>
+</head>
+<body>
+    <div class="background"></div>
+    <form class="form-signin input" id="idForm" method="post">
+        <h1 class="h3 mb-3 fw-normal">Регистрация</h1>
+        <div class="form-floating" id="idDiv_name">
+            <input name="login" type="text" class="form-control" placeholder="Имя" id="idInp_login" value="{{login}}">
+            <label for="idInp_login">Логин</label>
+                <p class="error" id="idError_login">логин занят!</p>
+        </div>
+
+        <div class="form-floating" id="idDiv_email">
+            <input name="email" type="email" class="form-control" placeholder="name@example.com" id="idInp_email" value="{{email}}">
+            <label for="idInp_email">Email</label>
+                <p class="error" id="idError_email">пользователь с таким email уже существует!</p>
+        </div>
+        <div class="form-floating" id="idDiv_password">
+            <input name="password" type="password" class="form-control" placeholder="Password" id="idInp_password" value="{{pswrd}}">
+            <label for="idInp_password">Пароль</label>
+            <p class="error" id="idError_pswrd"></p>
+        </div>
+        <div class="form-floating" id="idDiv_confirm_password">
+            <input name="conf_password" type="password" class="form-control" placeholder="Password" id="idInp_confirm_password" value="{{conf_pass}}">
+            <label for="idInp_confirm_password">Подтвердите пароль</label>
+        </div>
+        <button id="idBt_sign_up" class="w-100 btn btn-lg btn-primary" type="submit">Зарегистрироваться</button>
+    </form>
+</body>
+</html>
